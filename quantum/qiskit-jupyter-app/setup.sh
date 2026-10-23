@@ -344,6 +344,7 @@ APP_FLAGS=(
   --min-scale        1
   --max-scale        1
   --scale-down-delay 600
+  --timeout          600
   --cpu              1
   --memory           4G
   --service-account  "none"

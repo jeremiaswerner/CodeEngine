@@ -39,5 +39,14 @@ fi
 
 echo "[start] Starting JupyterLab…"
 exec jupyter lab \
-  --ip="*" \
-  --NotebookApp.allow_origin="*"
+  --ip="0.0.0.0" \
+  --port=8888 \
+  --no-browser \
+  --ServerApp.allow_origin="*" \
+  --ServerApp.allow_origin_pat=".*" \
+  --ServerApp.allow_remote_access=True \
+  --ServerApp.trust_xheaders=True \
+  --ServerApp.disable_check_xsrf=True \
+  --ServerApp.websocket_ping_interval=10 \
+  --ServerApp.websocket_ping_timeout=30 \
+  --ServerApp.preferred_dir="/home/jovyan/work"
